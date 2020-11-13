@@ -1,0 +1,40 @@
+<section class="section">
+	<div class="container">
+
+		<form (ngSubmit)="processForm()">
+			<!-- name -->
+			<div class="field">
+				<input type="text" name="firstName" class="input" placeholder="First Name" [(ngModel)]="firstName">
+  </div>
+
+				<div class="field">
+					<input type="text" name="lastName" class="input" placeholder="Last Name" [(ngModel)]="lastName">
+  </div>
+
+					<div class="field">
+						<input type="text" name="country" class="input" placeholder="Country" [(ngModel)]="country">
+  </div>
+
+						<div class="field">
+							<input type="text" name="language" class="input" placeholder="Language" [(ngModel)]="language">
+  </div>
+
+							<div class="field">
+								<input type="number" name="age" class="input" placeholder="Age" [(ngModel)]="age">
+  </div>
+
+								<!-- email -->
+								<div class="field">
+									<input type="email" name="email" class="input" placeholder="Email" [(ngModel)]="email">
+  </div>
+
+									<!-- password -->
+									<div class="field">
+										<input type="password" name="password" class="input" placeholder="Password" [(ngModel)]="password">
+  </div>
+
+										<button type="submit">Submit</button>
+
+		</form>
+	</div>
+</section>
