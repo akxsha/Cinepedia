@@ -9,8 +9,7 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit(): void {}
 
   loginUser(event){
     event.preventDefault()

@@ -1,0 +1,17 @@
+body {
+    font-family: sans-serif;
+    font-size: 145%;
+    text-align: left;
+    margin: auto;
+    padding-top: 40px;
+    background-color: rgb(117, 219, 117);
+    color: white;
+    top: -20px;
+  
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    height: 145px;
+    margin-top: -10px;
+    left: 50%;
+  }
