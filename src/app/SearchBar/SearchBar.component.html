@@ -6,5 +6,6 @@
 <ul>
   <li *ngFor="let movie of movies$ | async">
     {{ movie.Title }}
+    <body>Year: {{ movie.Year }} </body>
   </li>
 </ul>
