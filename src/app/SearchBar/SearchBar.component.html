@@ -1,4 +1,10 @@
 <form class="Search">
-  <input class="SearchBar" type="text" placeholder="Start the search for your movies!" aria-label="Search" mdbInput>
+  <input class="SearchBar" type="text" [formControl]="searchControl" placeholder="Start the search for your movies!" aria-label="Search" mdbInput>
   <button class="SearchButton" mdbWavesEffect type="submit">Go!</button>
 </form>
+
+<ul>
+  <li *ngFor="let movie of movies$ | async">
+    {{ movie.Title }}
+  </li>
+</ul>
