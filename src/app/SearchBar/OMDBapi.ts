@@ -6,8 +6,11 @@ export class OMDBapi {
 
   constructor(private http: HttpClient) { }
 
-  getMovieBySearchTerm(query) {
-    return this.http.get(`https://www.omdbapi.com/?apikey=3771a118&s=${query}`);
+  getMovieBySearchTerm(title) {
+    return this.http.get(`https://www.omdbapi.com/?apikey=3771a118&s=`+title);
   }
 
+  getMovieBySearchID(ID) {
+    return this.http.get("https://www.omdbapi.com/?apikey=3771a118&i=" + ID + "&Plot=full")
+  }
 }

@@ -1,11 +1,13 @@
 <form class="Search">
-  <input class="SearchBar" type="text" [formControl]="searchControl" placeholder="Start the search for your movies!" aria-label="Search" mdbInput>
+  <input class="SearchBar" type="text" #box (keyup.enter)="getinput(box.value)" placeholder="Start the search for your movies!" aria-label="Search" mdbInput>
   <button class="SearchButton" mdbWavesEffect type="submit">Go!</button>
 </form>
 
 <ul>
-  <li *ngFor="let movie of movies$ | async">
+  <li *ngFor="let movie of imdbIDs">
     {{ movie.Title }}
     <body>Year: {{ movie.Year }} </body>
+    <body>Rating: {{ movie.imdbRating }} </body>
+    <body>Plot: {{ movie.Plot }} </body>
   </li>
 </ul>

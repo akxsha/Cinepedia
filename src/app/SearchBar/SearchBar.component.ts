@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component, OnInit} from '@angular/core';
 import { OMDBapi } from './OMDBapi';
-import { map, switchMap, debounceTime, distinctUntilChanged } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'appSearchBar',
@@ -10,21 +8,23 @@ import { Observable } from 'rxjs';
   styleUrls: ['./SearchBar.component.css']
 })
 export class SearchBarComponent implements OnInit {
-  searchControl: FormControl;
-  movies$: Observable<any[]>;
+
   constructor(private omdbapi:OMDBapi) {}
+  imdbIDs: any = [];
+  results: any = [];
+  ID: any;
 
-  ngOnInit(){
-    this.searchControl = new FormControl();
+  getinput(name) {
+    this.omdbapi.getMovieBySearchTerm(name).subscribe((data: any) => {
+        this.results = data.Search;
+        for(var i of this.results){
+        this.ID = i.imdbID;
+        this.omdbapi.getMovieBySearchID(this.ID).subscribe((datas: any) => {
+        this.imdbIDs.push(datas);
+        })
+      }
+    })
+    }
 
-    this.movies$ = this.searchControl.valueChanges
-      .pipe(
-        debounceTime(500),
-        distinctUntilChanged(),
-        switchMap(
-          searchString => this.omdbapi.getMovieBySearchTerm(searchString)
-        ),
-        map((res:any) => res.Search)
-      );
-  }
+  ngOnInit(){}     
 }
