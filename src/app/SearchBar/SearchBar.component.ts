@@ -14,7 +14,9 @@ export class SearchBarComponent implements OnInit {
   results: any = [];
   ID: any;
 
+  searchreset(){this.imdbIDs=[];}
   getinput(name) {
+    this.searchreset();
     this.omdbapi.getMovieBySearchTerm(name).subscribe((data: any) => {
         this.results = data.Search;
         for(var i of this.results){
