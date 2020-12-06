@@ -33,4 +33,7 @@ export class MovieListComponent implements OnInit {
     });
   }
 
+  selectMovie(movie: Movie) {
+    this.selectedMovie = movie;
+    }
 }
