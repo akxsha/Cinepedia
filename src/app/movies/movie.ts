@@ -8,13 +8,3 @@ export class Movie {
     film!:string;
     winner!:boolean;
 }
-export class OMDBInfo {
-    _id?: string;
-    year!:number;
-    rated!:string;
-    genre!:string;
-    actors!:string;
-    plot!:string;
-    name!:string;
-    ratings!:string;
-}

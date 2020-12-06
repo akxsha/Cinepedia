@@ -28,10 +28,6 @@ export class MovieService {
                  .then(response=>response as Movie)
                  .catch(this.handleError);
     }
-    //get(OMDB)
-    getOMDBDetails(title:String,year:Number) {​​​​​
-      return this.http.get(`https://www.omdbapi.com/?apikey=3771a118&t=`+title+"&y="+ year.toString() +"&Plot=full");
-      }​​​​​
     private handleError (error: any) {
       let errMsg = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';

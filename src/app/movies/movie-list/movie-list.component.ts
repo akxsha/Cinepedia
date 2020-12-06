@@ -33,12 +33,4 @@ export class MovieListComponent implements OnInit {
     });
   }
 
-  selectMovie(movie: Movie) {
-    this.selectedMovie = movie;
-    this.movieService.getOMDBDetails(movie.film,movie.year_film).subscribe((datas:any)=>{
-      this.selectedMovie
-
-    })
-  }
-
 }
