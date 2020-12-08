@@ -15,21 +15,13 @@
             <br>category: {{movie.category}}
             <br>ceremony year: {{movie.year_ceremony}}
             <br>winner: {{movie.winner}}<br>
-
-            <button onclick="myFunction()">Show Additional Info</button>
-            <div id="myDIV">
-            Information pulled from IMDB: <br>
-            {{results}}
-            </div>
-            <script>
-            function myFunction() {
-              var x = document.getElementById("myDIV");
-              x.style.display = "block";
-            }
-            </script>
-
+            {{movie}}<br>
             <a (click)="getOMDBInfo(movie.film, movie.year_film.toString())">
             <br>show additional information</a>
+            <br>
+            <div *ngIf="results" class="row">
+                {{results}}
+            </div>
       </li>
     </ul>
 </div>
