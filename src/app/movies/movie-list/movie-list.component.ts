@@ -19,7 +19,7 @@ export class MovieListComponent implements OnInit {
 
   ngOnInit() {
      this.movieService
-      .getMovies(2019)
+      .getMovies("2019")
       .then((movies: Movie[]) => {
         this.movies = movies.map((movie) => {
           return movie;
@@ -32,7 +32,15 @@ export class MovieListComponent implements OnInit {
       return movie._id === movieId;
     });
   }
-
+  getMovies(yr:string){
+    this.movieService
+    .getMovies(yr)
+    .then((movies: Movie[]) => {
+      this.movies = movies.map((movie) => {
+        return movie;
+      });
+    });
+  }
   selectMovie(movie: Movie) {
     this.selectedMovie = movie;
     }

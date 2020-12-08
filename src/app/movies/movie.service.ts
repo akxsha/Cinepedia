@@ -10,10 +10,9 @@ export class MovieService {
     constructor (private http: HttpClient) {}
 
     // get("/api/movies")
-    getMovies(yr: Number): Promise<any | Movie[]> {
-
+    getMovies(yr: string): Promise<any | Movie[]> {
       const options = yr ?
-      { params: new HttpParams().set('year_ceremony', yr.toString()) } : {};
+      { params: new HttpParams().set('year_ceremony', yr) } : {};
       return this.http.get(this.moviesUrl,options)
                  .toPromise()
                  .then(response=>response as Movie[])
