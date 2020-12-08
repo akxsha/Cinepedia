@@ -4,7 +4,7 @@
       <span>
       
       <label for ="year">Year:</label>
-      <select name="year" id="year" (onChange)="getByYear()">
+      <select name="year" id="year" (onChange)="getByYear(this)">
         <option value="2019">2019</option>
         <option value="2018">2018</option>
         <option value="2017">2017</option>
@@ -18,12 +18,13 @@
         <option value="2009">2009</option>
         <option value="2008">2008</option>
       </select>
-      <script>
-        function getByYear() {
-          var x = document.getElementById("year");
-          return getMovies(x);
+      <script type="text/javascript">
+        function GetSelectedTextValue(year) {
+            var selectedText = year.options[year.selectedIndex].innerHTML;
+            var selectedValue = year.value;
+            return getMovies(selectedText);
         }
-        </script>
+    </script>
       </span>
       <span>
         <label for ="Search">Category:</label>
