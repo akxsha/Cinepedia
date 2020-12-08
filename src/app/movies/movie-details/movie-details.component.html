@@ -9,7 +9,7 @@
 
 <div *ngIf="movie" class="row">
     <ul class="list-group">
-        <li class="list-group-item" *ngFor="let movie of results">
+        <li class="list-group-item">
             {{movie.name}}<br>
             <br>film: {{movie.film}}
             <br>category: {{movie.category}}
@@ -20,11 +20,13 @@
             <br>show additional information</a>
             <br>
             <br>
+            <a *ngFor="let movie of results">
             <br>Genre: {{movie.Genre}}
             <br>Ratings:
             <br>Metascrore: {{movie.Metascore}}
             <br>IMDB Rating: {{movie.imdbRating}}
             <br>Plot: {{movie.Plot}}
+            </a>
         </li>
     </ul>
 </div>
