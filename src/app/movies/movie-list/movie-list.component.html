@@ -28,7 +28,7 @@
       <ul class="list-group">
         <li class="list-group-item"
           *ngFor="let movie of movies"
-          (click)="selectMovie(movie)"
+          (click)="selectMovie(movie);getOMDBInfo(movie.film, movie.year_film.toString());"
           [class.active]="movie === selectedMovie">
           {{movie.name}}
         </li>

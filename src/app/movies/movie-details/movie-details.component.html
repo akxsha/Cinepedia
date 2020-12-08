@@ -1,6 +1,3 @@
-<style>#myDIV{
-  display: none;
-}</style>
 <div *ngIf="movie" class="row">
     <div class="col-md-12">
       <h2 *ngIf="movie._id">Nomination Details</h2>
@@ -16,17 +13,19 @@
             <br>ceremony year: {{movie.year_ceremony}}
             <br>winner: {{movie.winner}}<br>
             <br>
-            <a (click)="getOMDBInfo(movie.film, movie.year_film.toString())">
-            <br>show additional information</a>
+            <br>additional information</a>
             <br>
             <br>
-            <a *ngFor="let movie of results">
+            <p *ngFor="let movie of results">
+            <br>{{movie.Poster}}
             <br>Genre: {{movie.Genre}}
             <br>Ratings:
             <br>Metascrore: {{movie.Metascore}}
             <br>IMDB Rating: {{movie.imdbRating}}
             <br>Plot: {{movie.Plot}}
-            </a>
+            </p>
         </li>
     </ul>
+
+
 </div>

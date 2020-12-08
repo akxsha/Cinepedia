@@ -14,6 +14,7 @@ import { parseConfigFileTextToJson } from 'typescript';
 export class MovieListComponent implements OnInit {
   movies: Movie[]
   selectedMovie: Movie
+  results: any[]
 
   constructor(private movieService: MovieService) { }
 
@@ -44,4 +45,5 @@ export class MovieListComponent implements OnInit {
   selectMovie(movie: Movie) {
     this.selectedMovie = movie;
     }
+
 }
