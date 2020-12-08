@@ -19,12 +19,12 @@
             <a (click)="getOMDBInfo(movie.film, movie.year_film.toString())">
             <br>show additional information</a>
             <br>
+            </li>
             <li *ngFor="let movie of results">
                 <br>{{movie}}
                 <br>{{movie.Genre}}
                 <br>{{movie.Plot}}
                 <br>{{movie.Ratings}}
             </li>
-      </li>
     </ul>
 </div>
