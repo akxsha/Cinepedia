@@ -13,7 +13,9 @@
             <br>ceremony year: {{movie.year_ceremony}}
             <br>winner: {{movie.winner}}<br>
             <br>
-            <br>additional information
+            <br>
+            <a (click)="getOMDBInfo(movie.film, movie.year_film.toString())">
+            additional information</a>
             <br>
             <br>
             <p *ngFor="let movie of results">

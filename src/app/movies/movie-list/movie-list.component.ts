@@ -45,10 +45,5 @@ export class MovieListComponent implements OnInit {
   selectMovie(movie: Movie) {
     this.selectedMovie = movie;
     }
-    getOMDBInfo(title:string, year:string) {
-      this.results=[];
-      this.movieService.getMovieBySearchTerm(title,year).subscribe((data:any)=>{
-          this.results.push(data);
-      });
-      }
+
 }
