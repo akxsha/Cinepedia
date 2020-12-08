@@ -13,7 +13,7 @@
             <br>ceremony year: {{movie.year_ceremony}}
             <br>winner: {{movie.winner}}
 
-            <a (click)="getOMDBInfo(movie.film, movie.year_film)">
+            <a (click)="getOMDBInfo(movie.film, movie.year_film.toString())">
             <br>show additional information</a>
       </li>
     </ul>
