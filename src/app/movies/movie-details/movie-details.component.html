@@ -1,3 +1,6 @@
+<style>#myDIV{
+  display: none;
+}</style>
 <div *ngIf="movie" class="row">
     <div class="col-md-12">
       <h2 *ngIf="movie._id">Nomination Details</h2>
@@ -12,24 +15,20 @@
             <br>category: {{movie.category}}
             <br>ceremony year: {{movie.year_ceremony}}
             <br>winner: {{movie.winner}}<br>
-            <button onclick="myFunction()">Try it</button>
 
+            <button onclick="myFunction()">Show Additional Info</button>
             <div id="myDIV">
-            This is my DIV element.
+            {{results}}
             </div>
-            
-            <p><b>Note:</b> The element will not take up any space when the display property set to "none".</p>
-            
             <script>
             function myFunction() {
               var x = document.getElementById("myDIV");
               if (x.style.display === "none") {
                 x.style.display = "block";
-              } else {
-                x.style.display = "none";
-              }
+              } 
             }
             </script>
+
             <a (click)="getOMDBInfo(movie.film, movie.year_film.toString())">
             <br>show additional information</a>
       </li>
