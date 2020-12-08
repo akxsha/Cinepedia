@@ -32,7 +32,7 @@ export class MovieListComponent implements OnInit {
       return movie._id === movieId;
     });
   }
-  getMovies(yr:string){
+  getYearMovies(yr:string){
     this.movieService
     .getMovies(yr)
     .then((movies: Movie[]) => {

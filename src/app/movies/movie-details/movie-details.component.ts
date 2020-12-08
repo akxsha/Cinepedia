@@ -14,4 +14,7 @@ export class MovieDetailsComponent {
   movie: Movie;
   constructor (private movieService: MovieService) {}
 
+  getOMDBInfo(title:string, year:string) {
+    return this.movieService.getMovieBySearchTerm(title,year);
+    }
 }
