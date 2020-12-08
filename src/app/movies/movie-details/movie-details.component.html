@@ -15,12 +15,15 @@
             <br>category: {{movie.category}}
             <br>ceremony year: {{movie.year_ceremony}}
             <br>winner: {{movie.winner}}<br>
-            {{movie}}<br>
+            <br>
             <a (click)="getOMDBInfo(movie.film, movie.year_film.toString())">
             <br>show additional information</a>
             <br>
             <div *ngIf="results" class="row">
-                {{results}}
+                <br>{{results.Rated}}
+                <br>{{results.Genre}}
+                <br>{{results.Plot}}
+                <br>{{results.Ratings}}
             </div>
       </li>
     </ul>
