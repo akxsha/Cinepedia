@@ -21,9 +21,6 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot([
-      {path: 'api-documentation', component:ApiDocumentationComponent}
-    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
