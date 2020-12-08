@@ -27,6 +27,10 @@ export class MovieService {
                  .then(response=>response as Movie)
                  .catch(this.handleError);
     }
+    
+    getMovieBySearchTerm(title:string, year:string) {
+      return this.http.get(`https://www.omdbapi.com/?apikey=3771a118&t=`+title+"&y="+year+"&Plot=full");
+      }
     private handleError (error: any) {
       let errMsg = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';

@@ -12,6 +12,9 @@
             <br>category: {{movie.category}}
             <br>ceremony year: {{movie.year_ceremony}}
             <br>winner: {{movie.winner}}
+
+            <a (click)="getOMDBInfo(movie.film, movie.year_film)">
+            <br>show additional information</a>
       </li>
     </ul>
 </div>
