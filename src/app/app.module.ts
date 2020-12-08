@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { MovieDetailsComponent } from './movies/movie-details/movie-details.component';
 import { MovieListComponent } from './movies/movie-list/movie-list.component';
 import { ApiDocumentationComponent } from './api-documentation/api-documentation.component';
-import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
