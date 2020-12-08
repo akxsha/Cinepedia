@@ -12,9 +12,10 @@ import {MovieService } from '../movie.service';
 export class MovieDetailsComponent {
   @Input()
   movie: Movie;
+  results: any = [];
   constructor (private movieService: MovieService) {}
 
   getOMDBInfo(title:string, year:string) {
-    return this.movieService.getMovieBySearchTerm(title,year);
+    this.results= this.movieService.getMovieBySearchTerm(title,year);
     }
 }
