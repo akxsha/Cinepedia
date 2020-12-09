@@ -12,7 +12,6 @@
     align-items: center;
     background-color: #7ac468;
     color: white;
-    font-weight: 600;
     font-family: 'Copperplate', fantasy;
 }
 .button {
@@ -23,7 +22,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 24px;
   }
 .spacer {
     flex: 1;
