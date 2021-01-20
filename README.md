@@ -1,12 +1,12 @@
 # Cinepedia
 Sacramento State - CSC 131 Project
 Contributors: 
-Mikaela Williams
-Akasha Stallworth
-Mark Zhang
-Maya Hill
-Sum Wong
-Leonardo Garcia
+Mikaela Williams,
+Akasha Stallworth,
+Mark Zhang,
+Maya Hill,
+Sum Wong,
+Leonardo Garcia,
 
 
 USING OUR API
