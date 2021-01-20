@@ -6,7 +6,7 @@ Akasha Stallworth,
 Mark Zhang,
 Maya Hill,
 Sum Wong,
-Leonardo Garcia,
+Leonardo Garcia
 
 
 USING OUR API
